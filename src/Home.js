@@ -14,6 +14,7 @@ function Home() {
             <p>I am a passionate web developer specializing in creating modern and efficient web applications. With expertise in the MERN stack (MongoDB, Express.js, React, Node.js), I build scalable and user-friendly digital solutions that solve real-world problems.</p>
           </div>
           <div className="cta-buttons">
+            <Link to="/about" className="btn secondary">About Me</Link>
             <Link to="/projects" className="btn secondary">View My Work</Link>
             <Link to="/contact" className="btn secondary">Get in Touch</Link>
           </div>
