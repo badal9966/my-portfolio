@@ -18,7 +18,7 @@ function About() {
             {!imageError ? (
               <div className="profile-image-container">
                 <img
-                  src="/images/profile.jpg"
+                  src="/images/profilee.jpg"
                   alt="Badal Sahu"
                   className="profile-image"
                   onError={handleImageError}
@@ -91,16 +91,16 @@ function About() {
 
           <h2>Education</h2>
           <div className="education-card">
-            <h3>Bachelor of Science in Computer Science</h3>
-            <p className="school">DAV Autonomous College, Titilagarh, Odisha</p>
-            <p className="duration">2021 - 2024</p>
-            <p>Core subjects: Data Structures, Algorithms, Web Development, Database Management, Software Engineering, Artificial Intelligence</p>
-          </div>
-          <div className="education-card">
             <h3>Master of Computer Application</h3>
             <p className="school">Kalinga University, Raipur, Chhattisgarh</p>
             <p className="duration">2024 - Current</p>
             <p>Core subjects: Data Structures, Algorithms, Web Development, Database Management, Software Engineering, Management, ReactJs</p>
+          </div>
+          <div className="education-card">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p className="school">DAV Autonomous College, Titilagarh, Odisha</p>
+            <p className="duration">2021 - 2024</p>
+            <p>Core subjects: Data Structures, Algorithms, Web Development, Database Management, Software Engineering, Artificial Intelligence</p>
           </div>
         </div>
       </section>
