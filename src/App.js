@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Navigation from "./Navigation";
+import Home from "./Home";
+// import Login from "./Login";
+import About from "./About";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import Footer from "./Footer";
+// import ErrorBoundary from './ErrorBoundary';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
+
+    return (
+        <div className="app-container">
+            {!isHomePage && <Navigation />}
+            <main className="main-content">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    {/* <Route path="/login" element={<Login />} /> */}
+                    <Route path="/about" element={<About />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+            </main>
+            {!isHomePage && <Footer />}
+        </div>
+    );
 }
 
 export default App;
